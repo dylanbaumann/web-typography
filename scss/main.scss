@@ -1,0 +1,160 @@
+/*  ---------------------------------------------------
+	Author: Dylan Baumann
+	Company: Grain & Mortar
+	Date: August 18, 2015
+	---------------------------------------------------
+	---------------------------------------------------
+	Table of Contents
+	---------------------------------------------------
+	01: CSS Reset
+	02: Page / General
+	03: Links / Colors / Fonts
+	04: Helper Classes
+	05: Forms
+	------------------------------------------------ */
+
+
+
+/*  ---------------------------------------------------
+	01: CSS Reset
+	------------------------------------------------ */
+	/* we're using normalize so we dont need a reset */
+	@font-face {
+	    font-family: 'calendas';
+	    src: url('../fonts/Calendas_Plus.otf');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+	@font-face {
+	    font-family: 'calendas_italic';
+	    src: url('../fonts/Calendas_Plus_Italic.otf');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+	@font-face {
+	    font-family: 'calendas_bold';
+	    src: url('../fonts/Calendas_Plus_Bold.otf');
+	    font-weight: normal;
+	    font-style: normal;
+	}
+
+
+
+
+/*  ---------------------------------------------------
+	02: Page / General
+	------------------------------------------------ */
+	html {
+		width:100%;
+		height:100%;
+	}
+
+	body {
+		position:relative;
+		width:100%;
+		height:100%;
+		padding:0;
+		margin:0;
+		background: white;
+		color:#54585a;
+		font-weight:normal;
+		font-style:normal;
+		line-height:1;
+		font-family:'calendas', serif;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	div { position:relative; }
+
+
+
+/*  ---------------------------------------------------
+	03: Links / Colors / Fonts
+	------------------------------------------------ */
+	a {
+		color: #DEA653;
+		text-decoration:none;
+		line-height: inherit;
+
+		&:after {
+			content:'';
+		}
+		&:hover,
+		&:active,
+		&:focus {
+			color: inherit;
+		}
+	}
+
+	/* Default header styles */
+	h1, h2, h3, h4, h5, h6 {
+		font-family:'calendas', serif;
+		font-weight: normal;
+		font-style: normal;
+		color: #6D6D6D;
+		margin-bottom: 10px;
+		line-height: 1.2125em;
+		font-size: 18px;
+		text-rendering: optimizeLegibility;
+	}
+	h1 {
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		padding-bottom: 0;
+		font-size: 24px;
+		font-family:'calendas_bold', serif;
+	}
+
+	h2 { text-transform:lowecase; }
+
+	h3 { font-family:'calendas_italic', serif; }
+
+
+	/* Default paragraph styles */
+	p {
+		font-family: inherit;
+		font-weight: normal;
+		font-size: 18px;
+		line-height: 1.6;
+		margin-bottom: 1.25em;
+		color: #6D6D6D;
+		font-family: inherit;
+		font-feature-settings: "frac";
+	}
+
+	/* Remove browser defaults and load a real version instead */
+	i, em{
+		font-style:normal;
+		font-family:'calendas_italic', serif;
+	}
+
+	b, strong{
+		font-style:normal;
+		font-weight:normal;
+		font-family:'calendas_bold', serif;
+	}
+
+
+
+
+/*  ---------------------------------------------------
+	04: Helper Classes
+	------------------------------------------------ */
+
+	/* use small-cap alternate glyphs */
+	.smallcaps, h2 {
+		text-transform:lowercase;
+		font-feature-settings: "smcp" on;
+	}
+
+
+
+/*  ---------------------------------------------------
+	08: Content
+	------------------------------------------------ */
+	.container {
+		max-width: 660px;
+		margin: 0 auto;
+		padding: 0 20px;
+	}
