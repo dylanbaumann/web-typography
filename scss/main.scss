@@ -1,30 +1,32 @@
 /*  ---------------------------------------------------
 	Author: Dylan Baumann
-	Company: Grain & Mortar
-	Date: August 18, 2015
 	---------------------------------------------------
 	---------------------------------------------------
 	Table of Contents
 	---------------------------------------------------
-	01: CSS Reset
-	02: Page / General
-	03: Links / Colors / Fonts
-	04: Helper Classes
-	05: Forms
+	:: Custom Fonts
+	:: Page / General
+	:: Typography
+	:: Helper Classes
 	------------------------------------------------ */
 
 
 
 /*  ---------------------------------------------------
-	01: CSS Reset
+	:: Custom Fonts
 	------------------------------------------------ */
-	/* we're using normalize so we dont need a reset */
+	// Calendas Plus Regular is a wonderful, breathtaking font with
+	// all of the features your heart has ever desired
 	@font-face {
 	    font-family: 'calendas';
 	    src: url('../fonts/Calendas_Plus.otf');
 	    font-weight: normal;
 	    font-style: normal;
 	}
+
+	// Please note, Italic and Bold are NOT free fonts NOR may you use them
+	// if you're interested in using them for personal sites please purchase
+	// your own copy from http://calendasplus.com/.
 	@font-face {
 	    font-family: 'calendas_italic';
 	    src: url('../fonts/Calendas_Plus_Italic.otf');
@@ -42,7 +44,7 @@
 
 
 /*  ---------------------------------------------------
-	02: Page / General
+	:: Page / General
 	------------------------------------------------ */
 	html {
 		width:100%;
@@ -50,7 +52,6 @@
 	}
 
 	body {
-		position:relative;
 		width:100%;
 		height:100%;
 		padding:0;
@@ -65,12 +66,11 @@
 		-moz-osx-font-smoothing: grayscale;
 	}
 
-	div { position:relative; }
 
 
 
 /*  ---------------------------------------------------
-	03: Links / Colors / Fonts
+	:: Typography
 	------------------------------------------------ */
 	a {
 		color: #DEA653;
@@ -96,31 +96,29 @@
 		margin-bottom: 10px;
 		line-height: 1.2125em;
 		font-size: 18px;
-		text-rendering: optimizeLegibility;
+		text-rendering: optimizeLegibility; // Surgical Use
 	}
+
 	h1 {
 		text-transform: uppercase;
 		letter-spacing: 2px;
 		padding-bottom: 0;
 		font-size: 24px;
-		font-family:'calendas_bold', serif;
+		font-family:'calendas_bold', serif; // Call true Bolds
 	}
 
-	h2 { text-transform:lowecase; }
+	h2 { text-transform: lowecase; } // Smallcaps only work in lowercase
 
-	h3 { font-family:'calendas_italic', serif; }
+	h3 { font-family:'calendas_italic', serif; } // Call true italics
 
 
 	/* Default paragraph styles */
 	p {
-		font-family: inherit;
-		font-weight: normal;
 		font-size: 18px;
 		line-height: 1.6;
 		margin-bottom: 1.25em;
-		color: #6D6D6D;
 		font-family: inherit;
-		font-feature-settings: "frac";
+		font-feature-settings: "frac"; // Enable Fractions
 	}
 
 	/* Remove browser defaults and load a real version instead */
@@ -139,7 +137,7 @@
 
 
 /*  ---------------------------------------------------
-	04: Helper Classes
+	:: Helper Classes
 	------------------------------------------------ */
 
 	/* use small-cap alternate glyphs */
@@ -148,11 +146,6 @@
 		font-feature-settings: "smcp" on;
 	}
 
-
-
-/*  ---------------------------------------------------
-	08: Content
-	------------------------------------------------ */
 	.container {
 		max-width: 660px;
 		margin: 0 auto;
